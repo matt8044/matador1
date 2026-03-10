@@ -1,89 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matador Capital Advisors</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matador Capital Advisors</title>
+  <meta name="description" content="Matador Capital Advisors" />
+  <style>
+    :root {
+      --bg-top: #121212;
+      --bg-bottom: #050505;
+      --text: #f1f1f1;
+      --soft: #d9d9d9;
+      --muted: #8d939c;
+      --muted-2: #6f7680;
+      --link: #d9d9d9;
+    }
 
-<style>
+    * { box-sizing: border-box; }
 
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:radial-gradient(circle at top,#141414 0%,#000000 60%);
-color:#f3f4f6;
-display:flex;
-align-items:center;
-justify-content:center;
-height:100vh;
-}
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-.container{
-text-align:center;
-padding:50px 40px;
-border-radius:22px;
-border:1px solid rgba(255,255,255,.06);
-background:rgba(255,255,255,.02);
-box-shadow:0 30px 70px rgba(0,0,0,.6);
-}
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
 
-.logo{
-width:440px;
-max-width:90%;
-margin-bottom:28px;
-}
+    .wrap {
+      width: min(92vw, 760px);
+      text-align: center;
+      animation: fadeUp 700ms ease-out both;
+    }
 
-.tagline{
-font-size:14px;
-letter-spacing:.08em;
-text-transform:uppercase;
-color:#9ca3af;
-margin-bottom:26px;
-}
+    .logo {
+      width: min(100%, 470px);
+      height: auto;
+      display: block;
+      margin: 0 auto 22px;
+      opacity: 0.96;
+    }
 
-.email{
-display:inline-block;
-padding:12px 20px;
-border-radius:999px;
-border:1px solid rgba(255,255,255,.12);
-color:#ffffff;
-text-decoration:none;
-font-size:15px;
-}
+    .tagline {
+      margin: 0 0 18px;
+      font-size: 12px;
+      line-height: 1.7;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
 
-.email:hover{
-background:rgba(255,255,255,.08);
-}
+    .email {
+      display: inline-block;
+      color: var(--link);
+      text-decoration: none;
+      font-size: 17px;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+    }
 
-.footer{
-margin-top:20px;
-font-size:12px;
-color:#6b7280;
-letter-spacing:.04em;
-}
+    .email:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
-</style>
+    .location {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.6;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .logo {
+        width: min(100%, 380px);
+        margin-bottom: 18px;
+      }
+
+      .tagline {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        margin-bottom: 14px;
+      }
+
+      .email {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <main class="wrap">
+    <img class="logo" src="matador-stacked-logo.png" alt="Matador Capital Advisors" />
 
-<div class="container">
+    <p class="tagline">Commercial Real Estate Capital Advisory</p>
 
-<img src="matador-stacked-logo.png" class="logo">
+    <a class="email" href="mailto:info@matador1.com">info@matador1.com</a>
 
-<div class="tagline">
-Commercial Real Estate Capital Advisory
-</div>
-
-<a class="email" href="mailto:mmitchell@matador1.com">
-mmitchell@matador1.com
-</a>
-
-<div class="footer">
-Dallas, Texas
-</div>
-
-</div>
-
+    <div class="location">Dallas, TX</div>
+  </main>
 </body>
 </html>
