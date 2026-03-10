@@ -9,12 +9,12 @@
 
   <style>
     :root {
-      --bg-top: #121212;
-      --bg-bottom: #050505;
+      --bg-top: #111111;
+      --bg-bottom: #040404;
       --text: #f0f0f0;
-      --muted: #9aa1ab;
-      --muted-2: #6f7680;
-      --link: #d9d9d9;
+      --muted: #a1a8b1;
+      --muted-2: #727983;
+      --link: #dddddd;
     }
 
     * { box-sizing: border-box; }
@@ -22,11 +22,11 @@
     html, body {
       margin: 0;
       min-height: 100%;
-      background:
-        radial-gradient(900px 380px at 50% 18%, rgba(255,255,255,0.035), transparent 62%),
-        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-      color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(700px 260px at 50% 34%, rgba(255,255,255,0.05), transparent 60%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
     }
 
     body {
@@ -43,21 +43,17 @@
       animation: fadeUp 700ms ease-out both;
     }
 
-    /* Logo */
     .logo {
       width: min(100%, 440px);
       height: auto;
       display: block;
-      margin: 0 auto 24px;
-
-      /* soften the white in the logo slightly */
-      opacity: 0.93;
+      margin: 0 auto 22px;
+      opacity: 0.92;
       filter: brightness(0.90) contrast(0.97);
     }
 
-    /* Tagline */
     .tagline {
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.15em;
@@ -65,15 +61,14 @@
       color: var(--muted);
     }
 
-    /* Email */
     .email {
       display: inline-block;
+      margin: 0 0 8px;
       color: var(--link);
       text-decoration: none;
       font-size: 18px;
       font-weight: 500;
       letter-spacing: 0.02em;
-      margin-bottom: 8px;
     }
 
     .email:hover {
@@ -81,16 +76,13 @@
       text-underline-offset: 3px;
     }
 
-    /* Location */
     .location {
-      margin-top: 0;
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted-2);
     }
 
-    /* subtle fade animation */
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -102,16 +94,15 @@
       }
     }
 
-    /* mobile adjustments */
     @media (max-width: 520px) {
       .logo {
         width: min(100%, 360px);
-        margin-bottom: 22px;
+        margin-bottom: 20px;
       }
 
       .tagline {
         font-size: 13px;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.13em;
       }
 
       .email {
@@ -120,11 +111,8 @@
     }
   </style>
 </head>
-
 <body>
-
   <main class="wrap">
-
     <img class="logo" src="matador-stacked-logo.png" alt="Matador Capital Advisors" />
 
     <p class="tagline">Commercial Real Estate Capital Advisory</p>
@@ -132,8 +120,6 @@
     <a class="email" href="mailto:info@matador1.com">info@matador1.com</a>
 
     <div class="location">Dallas, TX</div>
-
   </main>
-
 </body>
 </html>
